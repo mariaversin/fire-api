@@ -1,0 +1,62 @@
+
+body{
+    background: url(fire3.jpg);
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Raleway', sans-serif;
+    font-size: 60px;
+    display:flex;
+    align-items: center;
+    background-size: cover;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    overflow: hidden;
+}
+
+h1{
+    color:#fff;
+    position:absolute;
+    top:75px;
+    font-size: 95px;
+    letter-spacing: 6px;
+}
+h2{
+    color:#fff;
+    position:absolute;
+    top:75px;
+    font-size: 40px;  
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity:0;
+    position: absolute;
+    z-index: -1;
+}
+.inputfile + label {
+    border-radius: 10px;
+    background-color: #fcc79d73;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 0.4em;
+    position: static;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: orangered;
+}
+
+.inputfile + label {
+    cursor: pointer; /* "hand" cursor */
+}
+
+.inputfile:focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}
