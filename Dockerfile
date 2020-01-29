@@ -1,12 +1,13 @@
-FROM python:3.5/alpine-python-opencv
+FROM jjanzic/docker-python3-opencv
 
-WORKDIR /usr/src/app
+FROM tensorflow/tensorflow:latest-gpu-py3
 
-COPY requirements.txt ./
+ADD . /app
+
+WORKDIR /app
+
+RUN pip install keras
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
-
-
-CMD [ "python", "app.py" ]
+CMD [ "python", "app.py", "src/predict.py"]

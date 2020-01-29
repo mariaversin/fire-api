@@ -2,7 +2,6 @@ import json
 import pandas as pd
 import numpy as np
 import cv2
-from PIL import Image
 import keras
 from keras import backend as k
 from keras.models import Sequential
@@ -17,10 +16,10 @@ import subprocess
 
 #def get_model():
 
-with open ('/home/maria/Documents/final-project/Model_0.97_150x150.json','r+') as f:
+with open ('Model_0.97_150x150.json','r+') as f:
     model_json = json.load(f)
 model = keras.models.model_from_json(model_json)
-model.load_weights('/home/maria/Documents/final-project/Model_0.97_150x150.h5')
+model.load_weights('Model_0.97_150x150.h5')
 
 
 def preprocess_image(path):
