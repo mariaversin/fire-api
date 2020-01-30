@@ -16,7 +16,7 @@ def load_model():
     with open ('Model_0.97_150x150.json','r+') as f:
         model_json = json.load(f)
     global model
-    model = keras.models.model_from_json(model_json)
+    model = tf.keras.models.model_from_json(model_json)
     model.load_weights('Model_0.97_150x150.h5')
 
 
