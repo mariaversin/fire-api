@@ -4,14 +4,10 @@ import numpy as np
 import cv2
 import keras
 from keras import backend as k
-from keras.models import Sequential
-from keras.models import load_model
+from keras.models import Sequential, load_model,model_from_json
 from keras.preprocessing.image import img_to_array
-from flask import request
-from flask import Flask
-from keras.models import model_from_json
+from flask import Flask, request
 import os
-from tensorflow import keras
 import subprocess
 
 def load_model():

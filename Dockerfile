@@ -1,7 +1,5 @@
 FROM jjanzic/docker-python3-opencv
 
-FROM tensorflow/tensorflow:latest-gpu-py3
-
 ADD . /app
 
 WORKDIR /app
