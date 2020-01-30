@@ -35,4 +35,4 @@ if __name__ == '__main__':
  app.run()
 
 if __name__ == "app":
-  load_model()
+  p.load_model()
