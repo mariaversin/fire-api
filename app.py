@@ -8,7 +8,7 @@ from flask import send_from_directory
 
 app = Flask(__name__)
 
-app.config['UPLOAD_FOLDER'] = '/home/maria/Documents/final-project/fotos'
+app.config['UPLOAD_FOLDER'] = 'fotos'
 app.config['DEBUG'] = True
 
 @app.route('/fotos/<path:path>')
@@ -27,8 +27,8 @@ def uploader():
 
     #f.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
     #prediction = p.get_prediction(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-    image = f.save("/home/maria/Documents/final-project/fotos/predict.jpg")
-    pred = p.get_prediction("/home/maria/Documents/final-project/fotos/predict.jpg")
+    image = f.save("fotos/predict.jpg")
+    pred = p.get_prediction("fotos/predict.jpg")
     return render_template("predict.html",pred=pred )
 
 if __name__ == '__main__':
