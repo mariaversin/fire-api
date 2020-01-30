@@ -6,7 +6,5 @@ numpy==1.17.4
 pandas==0.25.3
 python-dotenv==0.10.3
 gunicorn==20.0.4
-tensorboard==2.0.2
-tensorflow-estimator==2.0.1
-tensorflow==1.15.2
+tensorflow==2.0.0
 opencv-contrib-python-headless==3.4.3.18
