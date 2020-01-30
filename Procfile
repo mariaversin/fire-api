@@ -1,1 +1,1 @@
-web: gunicorn app:app --preload  --bind 0.0.0.0:${PORT} --log-level=DEBUG
+web: gunicorn app:app --preload  --bind 0.0.0.0:${PORT} --log-level=DEBUG --timeout 90
