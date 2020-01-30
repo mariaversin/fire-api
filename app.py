@@ -32,7 +32,8 @@ def uploader():
     return render_template("predict.html",pred=pred )
 
 if __name__ == '__main__':
- app.run()
+  port = int(os.environ.get('PORT', 5000))
+  app.run(host='0.0.0.0', port=port)
 
 if __name__ == "app":
   p.load_model()

@@ -1,1 +1,1 @@
-web: gunicorn app:app --preload --timeout 30 --workers=4 --bind 127.0.0.1:5000
+web: gunicorn app:app --preload ---workers=4 --bind 0.0.0.0:${PORT} wsgi
