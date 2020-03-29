@@ -1,4 +1,4 @@
-Keras==2.2.1
+Keras==2.3.1
 Flask==1.1.1
 opencv-python==4.1.2.30
 jsonschema==2.6.0
