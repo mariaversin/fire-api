@@ -24,7 +24,6 @@ def uploader():
   if request.method == 'POST': 
     f = request.files['archivo']
     filename = secure_filename(f.filename)
-
     #f.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
     #prediction = p.get_prediction(os.path.join(app.config['UPLOAD_FOLDER'], filename))
     image = f.save("fotos/predict.jpg")

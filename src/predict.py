@@ -1,7 +1,6 @@
 import json
 import keras
 import tensorflow as tf
-from tensorflow import keras
 import pandas as pd
 import numpy as np
 import cv2
@@ -13,12 +12,11 @@ from flask import Flask, request
 import os
 import subprocess
 
-def load_model():
-    with open ('Model_0.97_150x150.json','r+') as f:
-        model_json = json.load(f)
-    global model
-    model = tf.keras.models.model_from_json(model_json)
-    model.load_weights('Model_0.97_150x150.h5')
+
+with open ('Model_0.97_150x150.json','r+') as f:
+    model_json = json.load(f)
+model = tf.keras.models.model_from_json(model_json)
+model.load_weights('Model_0.97_150x150.h5')
 
 
 def preprocess_image(path):
