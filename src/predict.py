@@ -1,11 +1,9 @@
 import json
-import keras
 import tensorflow as tf
 import pandas as pd
 import numpy as np
 import cv2
 import keras
-from keras import backend as k
 from keras.models import Sequential, load_model,model_from_json
 from keras.preprocessing.image import img_to_array
 from flask import Flask, request
